@@ -1,30 +1,103 @@
-# React + TypeScript + Vite
+# Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a portfolio website template built using Vite, React, and TypeScript. It's designed to showcase your projects, skills, and experience in a clean and responsive manner. The use of Vite ensures fast development and efficient bundling, while TypeScript provides static typing for a more robust codebase.
 
-Currently, two official plugins are available:
+## Table of Contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Features](#features)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+  - [Folder Structure](#folder-structure)
+  - [Customization](#customization)
+- [Deployment](#deployment)
+- [Technologies Used](#technologies-used)
+- [License](#license)
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Vite:** Utilizes Vite for a fast and efficient development experience.
+- **TypeScript:** Written entirely in TypeScript for static typing and enhanced code quality.
+- **Responsive Design:** Ensures a seamless experience across various devices and screen sizes.
+- **Project Showcase:** Display your projects with details such as descriptions, technologies used, and project links.
+- **Skills Section:** Highlight your skills and proficiency in various technologies.
+- **Contact Form:** Include a contact form for visitors to get in touch with you easily.
+- **Dark Mode:** Toggle between light and dark mode for improved user experience.
 
-- Configure the top-level `parserOptions` property like this:
+## Getting Started
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+### Prerequisites
+
+Make sure you have Node.js and npm installed on your machine.
+
+### Installation
+
+1. Clone this repository:
+
+    ```bash
+    git clone https://github.com/your-username/portfolio.git
+    ```
+
+2. Navigate to the project folder:
+
+    ```bash
+    cd portfolio
+    ```
+
+3. Install dependencies:
+
+    ```bash
+    npm install
+    ```
+
+## Usage
+
+### Folder Structure
+
+The project structure is organized as follows:
+
+- `src/`: Contains the source code of the website.
+
+  -  `Assets`: Store static data 
+  - `components/`: Reusable components Atomic Design.
+      - `Atoms`
+      - `Molecules`
+      - `Organisms`
+      - `Templates`
+      - `Pages`
+  - `styles/`: Stylesheets for the project.
+  - `utils/`: Utility functions and helpers.
+- `public/`: Static assets such as images and fonts.
+
+### Customization
+
+1. **Personal Information:**
+    - Open `src/data/profile.ts` and update the information with your details.
+   
+2. **Projects:**
+    - Add your projects to `src/data/projects.ts`.
+
+3. **Skills:**
+    - Update your skills in `src/data/skills.ts`.
+
+4. **Contact Form:**
+    - Connect the contact form to your preferred backend service. Update the `handleSubmit` function in `src/Compoent/pages/Contact.vue`.
+
+5. **Styling:**
+    - Customize the styles in `src/styles`.
+
+## Deployment
+
+To build and deploy the website, run:
+
+```bash
+npm run build
 ```
+This will generate a dist folder containing the optimized and minified assets. Upload the contents of this folder to your hosting provider.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Technologies Used
+Vite
+TypeScript
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
